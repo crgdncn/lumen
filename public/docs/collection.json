@@ -1,0 +1,298 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "lumen.test"
+        }
+    ],
+    "info": {
+        "name": "Craig learning Lumen",
+        "_postman_id": "c8dcdd29-a70d-45f0-a2e8-5871463bde01",
+        "description": "A Laravel Developers Guide to Lumen",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Cities",
+            "description": "",
+            "item": [
+                {
+                    "name": "City: Display a listing of the City resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cities",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cities"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "City List",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "\n[\n    {\n        id: 1,\n        name: \"Cary\",\n        created_at: \"2021-10-30T00:42:41.000000Z\",\n        updated_at: \"2021-10-30T00:42:41.000000Z\"\n    },\n    {\n        id: 2,\n        name: \"Durham\",\n        created_at: \"2021-10-30T00:42:41.000000Z\",\n        updated_at: \"2021-10-30T00:42:41.000000Z\"\n    }\n]\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "City: Display the specified City resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cities\/:city",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cities\/:city",
+                            "variable": [
+                                {
+                                    "id": "city",
+                                    "key": "city",
+                                    "value": "eveniet",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "City Show",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "\n{\n    id: 1,\n    name: \"Makenzie Mayert\",\n    created_at: \"2021-10-30T00:42:41.000000Z\",\n    updated_at: \"2021-10-30T00:42:41.000000Z\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "City: Remove the specified City resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cities\/:city",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cities\/:city",
+                            "variable": [
+                                {
+                                    "id": "city",
+                                    "key": "city",
+                                    "value": "officiis",
+                                    "description": "Id of City resource"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "City Destroy",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                }
+                            ],
+                            "code": 500,
+                            "body": "{\n    \"message\": \"Server Error\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "City: Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cities\/:city",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cities\/:city",
+                            "variable": [
+                                {
+                                    "id": "city",
+                                    "key": "city",
+                                    "value": "quibusdam",
+                                    "description": "Id of City resource"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"laborum\"}"
+                        },
+                        "description": "City Update",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "\n{\n    id: 1,\n    name: \"Makenzie Mayert\",\n    created_at: \"2021-10-30T00:42:41.000000Z\",\n    updated_at: \"2021-10-30T00:42:41.000000Z\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "City: Store a newly created City resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cities",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cities"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"et\"}"
+                        },
+                        "description": "City Store",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "\n{\n    id: 1,\n    name: \"Makenzie Mayert\",\n    created_at: \"2021-10-30T00:42:41.000000Z\",\n    updated_at: \"2021-10-30T00:42:41.000000Z\"\n}\n",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "\/",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "\/",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "Lumen (8.3.1) (Laravel Components ^8.0)",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
