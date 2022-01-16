@@ -53,6 +53,18 @@ class CityResourceTest extends TestCase
     /**
      *
      */
+    public function testUserCanShowResourceListing()
+    {
+        $city = City::factory()->create();
+
+        $this->get(route('city.show'));
+        $this->assertResponseStatus(Response::HTTP_OK);
+
+    }
+
+    /**
+     *
+     */
     public function testUserCanUpdateResource()
     {
         $city = City::factory()->create();

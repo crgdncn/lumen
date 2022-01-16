@@ -4,4 +4,6 @@ Homestead.json
 Homestead.yaml
 .env
 .phpunit.result.cache
+.phpunit.cache
 .scribe
+_coverage report
